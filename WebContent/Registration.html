@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>E-Resume Builder</title>
+    <style>
+        body {
+            background-color: rgb(230, 236, 240);
+        }
+        
+        form {
+            padding: 10px;
+            line-height: 10px;
+        }
+        
+        main {
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            background: beige;
+        }
+        
+        .imgcontainer {
+            text-align: center;
+            /*border-radius: 500%;*/
+            margin: 20px 12px;
+        }
+        
+        p {
+            font-family: Open Sans;
+            color: black;
+            border-bottom: 1.50px solid black;
+            font-family: cursive;
+            color: black;
+        }
+        
+        button {
+            background-color: rgb(0, 0, 0);
+            cursor: pointer;
+            width: 100px;
+            height: 25px;
+        }
+        
+        button:hover {
+            opacity: 0.52;
+        }
+    </style>
+    <script src="script.js"></script>
+</head>
+
+
+
+<body>
+    <p style="color:rgb(69, 141, 10); 
+font-size:49.9px;  
+font-weight:bold;
+text-align:center;">
+        Registration form
+
+    </p>
+
+<form align="center">
+<br>
+*First name:<input type="text" name="FirstName" value="" placeholder="Name"required><br>
+Middle name:<input type="text" name="MiddleName" value=""placeholder="Middle Name"><br>
+*Last name:<input type="text" name="LastName" value=""placeholder="Last Name" required><br>
+<label for="birthday">Birthday:</label>
+<input type="date" id="birthday" name="birthday"><br>
+*Username:<input type="text" id="usrname" name="usrname"placeholder="Username Name" required><br>
+*Password:<input type="password" name="psw" placeholder="Password" id="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br><br>
+<input type="submit" value="Submit" >  
+<br>
+<label>
+  <input type="checkbox" checked="checked" name="remember"> Remember me
+</label>
+<br>
+<br>
+<label style="color:red">* Must be filled out</label>
+</b>
+</style>
+</p>
+</pre>
+            <button type="button " class="cancelbtn " style="color:White">Cancel</button><br>
+            <br><br>
+            <span class="Password"><a href="# ">Forget password?</a></span>
+            <span><a href="Login.html">Already register?</a></span>
+    </div>
+    </form>
+
+    <div id="cursor" class="cursor--moved cursor--hidden" style="top: 231px; left: 1036px;"></div>
+
+    
+
+
+</body>
+
+</html>

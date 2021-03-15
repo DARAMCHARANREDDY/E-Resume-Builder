@@ -1,0 +1,45 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body style="background-color: #1A3263;color: #FAB95B;">
+<header>
+  <a id="logo" href="index.html">
+            <img src="logo.png" alt="Logo">
+            <span>E-Resume Builder</span>
+        </a>
+
+        <!-- main navigation links -->
+        <nav>
+            <ul >
+                <li><a href="about.html" >About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+</header>
+<main style="display:flex; justify-content:center; align-items:center;margin-top:7%;">
+<div class="card text-center" style="width: 50rem">
+  <div class="card-body" style="align: center">
+    <h5 class="card-title">Forgot Password</h5>
+    <form class="card-form" method="post" action="userchecking.jsp">
+    	<div class="form-row" style="justify-content:center;">
+				    <div class="form-group col-md-6" >
+				      <label for="email">Email</label>
+				      <input type="text" class="form-control" name="email" placeholder="Enter Email">
+				    </div>
+		</div>
+		<input type="submit" class="btn btn-primary" value="Next"/>
+    </form>
+  </div>
+</div>
+</main>
+<footer style="position:fixed; bottom:0%;">
+  <span>E-RESUME BUILDER<br>Copyright &copy; 2020 </span>
+</footer>
+
+</body>
+</html>

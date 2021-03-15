@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<!--<html>
+
+<head>
+    <title>E-Resume Builder</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(230, 236, 240);
+            font-family: sans-serif;
+        }
+        
+        .loginbox {
+            width: 350px;
+            height: 420px;
+            background: black;
+            color: white;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+            padding: 70px 30px
+        }
+        
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 25%;
+            position: absolute;
+            top: -75px;
+            left: 29%
+        }
+        
+        h1 {
+            margin: 0;
+            padding: 0 0 20 px;
+            text-align: center;
+            font-size: 22px;
+        }
+        
+        .loginbox p {
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+        
+        .loginbox input {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .loginbox input[type="text"],
+        input[type="password"] {
+            border: none;
+            border-bottom: 1px solid white;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: white;
+            font-size: 18px;
+        }
+        
+        .loginbox input[type="submit"] {
+            border: none;
+            outline: none;
+            height: 40px;
+            background: red;
+            color: white;
+            font-size: 18px;
+            border-radius: 20px;
+        }
+        
+        .loginbox input[type="submit"]:hover {
+            cursor: pointer;
+            background: #ffc107;
+            color: #000;
+        }
+        
+        .loginbox a {
+            text-decoration: none;
+            font-size: 12px;
+            line-height: 20px;
+            color: darkgrey;
+        }
+        
+        .loginbox a:hover {
+            color: #ffc107;
+        }
+    </style>
+
+    <body>
+        <div class="loginbox">
+            <img src="heart.png" class="avatar">
+            <h1>Login Here</h1>
+            <form>
+                <p>Username</p>
+                <input type="text" name= "" placeholder="Enter Username" required id="t1">
+                <p>Password</p>
+                <input type="Password" name="" placeholder="Enter Password" required id="t2">
+                <input type="submit" name="" value="Login" onclick="success()"><br>
+                <a href="#">Forget your Password?</a><br>
+                <a href="E:/EP SKILLING PROJECT/Registration.html">Don't have account?</a>
+            </form>
+        </div>
+    </body>
+</head>
+
+</html>!-->
+
+<html>
+  <head>
+  <title>E-Resume Builder</title>
+  <script>
+    function login()
+    {
+        var uname = document.getElementById("email").value;
+        var pwd = document.getElementById("pwd1").value;
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if(uname =='')
+        {
+            alert("please enter user name.");
+        }
+        else if(pwd=='')
+        {
+            alert("enter the password");
+        }
+        else if(pwd.length < 6)
+        {
+            alert("Password min length is 6");
+        }
+        else
+        {
+        if(uname=="Harshith" && pwd=="Harshith_123")
+        {
+            
+            window.location = "page1.html";
+        }
+        }
+    }
+    function reset()
+    {
+        window.location="Login.html";
+    }
+    function a()
+    {
+        window.location="success.html";
+
+    }
+    function b()
+    {
+        window.location="Registration.html"
+    }
+  </script>
+  <!--<style>
+    body
+   {
+     margin:0px; background-color:aqua; color:black; font-family:Arial, Helvetica, sans-serif;
+   }
+   #main
+   {
+     width:600px; height:260px; margin-left:auto; margin-right:auto; border-radius:5px; padding-left:10px; margin-top:100px;
+     border-top:3px double #000000; border-bottom:3px double #000000; padding-top:20px;
+   }
+   #main table
+   {
+     font-family:"Comic Sans MS", cursive;
+   } 
+  /* css code for textbox */
+  #main .tb
+  {
+    height:28px; width:230px; border:1px solid#000000; columns: #000000;; font-weight:bold; border-left:5px solid #f7f7f7; opacity:0.9;
+  }
+
+   /* css code for button*/
+   #main .btn
+   {
+    width:80px; height:32px; outline:none;  font-weight:bold; border:0px solid#000000; text-shadow: 0px 0.5px 0.5px #fff;   
+    border-radius: 2px; font-weight: 600; color:#000000; letter-spacing: 1px; font-size:14px; -webkit-transition: 1s; -moz-transition: 1s; transition: 1s;
+   }
+  
+   #main .btn:hover
+   {
+    background-color:#27a465; outline:none;  border-radius: 2px; color:#f1f1f1; border:1px solid #f1f1f1;
+   }
+  </style>!-->
+  <link rel="stylesheet"  href="style.css">
+  </head>
+    <body>
+        <header>
+       <a id="logo" href="index.html">
+            <img src="logo.png" alt="Logo">
+            <span>E-Resume Builder</span>
+        </a>
+
+        <!-- main navigation links -->
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Registration.html">Registration</a></li>
+                <li><a href="Login.html">Login</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main style="background-color: black;color: white">
+    <h2 align="center">Welcome To E-Resume Builder Login</h2>
+    <!-- Login box -->
+    <div class="login">
+    <table cellspacing="2" align="center" cellpadding="15" border="0" >
+    <tr>
+    <td>Enter User Name :</td>
+    <td><input type="text" placeholder="Enter user name here" id="email" class="tb" /></td>
+    </tr>
+    <tr>
+    <td>Enter Password :</td>
+    <td><input type="password" placeholder="Enter Password here" id="pwd1" class="tb" /></td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>
+    <input type="submit" value="Reset" class="btn" onclick="reset()"/>
+    </td>
+    <td>
+        <input type="submit" value="Login" class="btn" onClick="login()" />
+    </td>
+    </tr>
+    <tr>
+        <td><input type="button" value="Forget your Password?" onclick="a()"></td>
+    </tr>
+    <tr>
+        <td> <input type="button" value="Don't have account?" onclick="b()"></td>
+    </tr>
+    </table>
+    </div>
+    </main>  
+    <footer>
+        <span>E-RESUME BUILDER<br>Copyright &copy; 2020 </span>
+    </footer> 
+  </body>
+  </html>

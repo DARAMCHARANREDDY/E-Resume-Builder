@@ -1,0 +1,212 @@
+/* resetting browser stuff */
+*     {
+  box-sizing: border-box;
+}
+html,
+body   {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* styling our overall page */
+body     {
+  background: #FFF;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* styling our header */
+header   {
+  background: #222;
+  color: #FFF;
+  padding: 20px 30px;
+}
+
+/* logo */
+#logo         {
+  display: inline-block;
+  color: #FFF;
+  text-decoration: none;
+  width: 49%;
+}
+#logo img    {
+  width: 50px;
+  border-radius: 3px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+#logo span   {
+  display: inline-block;
+}
+
+/* main navigation */
+nav     {
+  width: 50%;
+  display: inline-block;
+  text-align: right;
+}
+nav ul   {
+  list-style: none;
+  margin: 0;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a    {
+  color: #FFF;
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 3px;
+  transition: 0.3s ease all;
+  
+}
+nav ul li a:hover   {
+  background: #444;
+}
+
+/* styling our footer */
+footer   {
+  position:fixed;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+}
+
+
+/* styling our main content */
+.hero           {
+  min-height: 800px;
+  text-align: center;
+  background-image: url('sky.jpg');
+  background-size: cover;
+}
+.hero-content   {
+  color: #FFF;
+  padding-top: 130px;
+}
+.hero-content h1   {
+  font-size: 100px;
+  margin: 0;
+}
+.hero-content p    {
+  font-size: 50px;
+}
+.hero-content a    {
+  display: inline-block;
+  color: #FFF;
+  border: 3px solid #FFF;
+  border-radius: 3px;
+  padding: 15px 30px;
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 28px;
+}
+
+/* basic site sections */
+.site-section   {
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+.site-section-secondary   {
+  background: #EFEFEF;
+}
+.site-section-inside   {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section-header {
+  margin-bottom: 30px;
+}
+.section-header h2  {
+  font-size: 50px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #777;
+}
+
+/* feature boxes */
+.feature-box   {
+  display: inline-block;
+  width: 33%;
+  padding: 20px 30px;
+}
+.feature-box img  {
+  margin-bottom: 12px;
+  width: 80px;
+}
+.feature-box h5   {
+  font-size: 20px;
+  color: #999;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* testimonial boxes */
+.testimonial-box   {
+  display: inline-block;
+  width: 33%;
+  padding: 20px 30px;
+}
+.testimonial-content   {
+  background: #FFF;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.testimonial-author           {
+
+}
+.testimonial-author img {
+  float: left;
+  width: 80px;
+  border-radius: 50%;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+.testimonial-author h5   {
+  font-size: 18px;
+  margin: 0;
+  padding-top:15px;
+}
+.testimonial-author span {
+  font-size: 14px;
+}
+
+.main{width:600px; height:auto; overflow:hidden; padding-bottom:20px; margin-left:auto; margin-right:auto; 
+    padding-left:10px;
+    }
+    
+    .main table{font-family:"Comic Sans MS", cursive;}
+    /* css code for textbox */
+    .main .tb{height:28px; width:230px; border:1px solid #000000; color:black; font-weight:bold; border-left:5px solid #f7f7f7; opacity:0.9;}
+    
+    .main .tb:focus{height:28px; border:1px solid #000000; outline:none; border-left:5px solid #000000;}
+
+    .main .td{vertical-align:bottom}
+    /* css code for button*/
+    .main .btn{width:150px; height:32px; outline:none;  color:#f7f7f7; font-weight:bold; border:0px solid #000000; 
+    text-shadow: 0px 0.5px 0.5px #fff; border-radius: 2px; font-weight: 600; color: #000000; letter-spacing: 1px; 
+    font-size:20px; background-color:#f1f1f1; -webkit-transition: 1s; -moz-transition: 1s; transition: 1s;}
+  
+    .main .btn:hover{
+  background-color:#000000; outline:none;  border-radius: 2px; color:#f1f1f1; border:1px solid #f1f1f1;
+    -webkit-transition: 1s; -moz-transition: 1s; transition: 1s; 
+  }
+
+input[class=btn] {
+        background-color: #FAB95B;
+        border: none;
+        color: black;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
