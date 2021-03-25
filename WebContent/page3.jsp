@@ -31,12 +31,14 @@ String email=(String)session.getAttribute("email");
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                  <li><a href="#"><%=email %></a></li>
+                 <li><a href="logout.jsp">Logout</a></li>
             </ul>
         </nav>
 	</header>
 	<main style="padding-left: 25px;padding-right: 25px;padding-top: 25px;">
 		<div class="h-tag">
-				<h2>Complete this form to let the employers know your objective</h2><br>
+				<h2>Complete this form to let the employers know your Objective</h2><br>
+				<h5>(Objective:<br>A resume objective is a statement of your goals for employment, usually listed at the top of your resume. A resume objective is typically one or two sentences long.)</h5>
 		</div>
 			<br>
 		<form name="f" method="post" action="resume1entrypage2.jsp">

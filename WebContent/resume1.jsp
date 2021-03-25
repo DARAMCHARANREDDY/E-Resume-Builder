@@ -2,42 +2,42 @@
     pageEncoding="ISO-8859-1"%>
  <%
 int id=Integer.parseInt(request.getParameter("id"));
-String fname="#";
-String lname="#";
-String mail="#";
-String linkedin="#";
-String github="#";
-String contact="#";
-String objective="#";
-String skill1="#";
-String level1="#";
-String skill2="#";
-String level2="#";
-String skill3="#";
-String level3="#";
-String skill4="#";
-String level4="#";
-String board1="#";
-String institution1="#";
-String yop1="#";
-String gpa1="#";
-String board2="#";
-String institution2="#";
-String yop2="#";
-String gpa2="#";
-String board3="#";
-String institution3="#";
-String yop3="#";
-String gpa3="#";
-String activity="#";
-String moocs1="#";
-String moocs2="#";
-String moocs3="#";
-String moocs4="#";
-String link1="#";
-String link2="#";
-String link3="#";
-String link4="#";
+String fname=" ";
+String lname=" ";
+String mail=" ";
+String linkedin=" ";
+String github=" ";
+String contact=" ";
+String objective=" ";
+String skill1=" ";
+String level1=" ";
+String skill2=" ";
+String level2=" ";
+String skill3=" ";
+String level3=" ";
+String skill4=" ";
+String level4=" ";
+String board1=" ";
+String institution1=" ";
+String yop1=" ";
+String gpa1=" ";
+String board2=" ";
+String institution2=" ";
+String yop2=" ";
+String gpa2=" ";
+String board3=" ";
+String institution3=" ";
+String yop3=" ";
+String gpa3=" ";
+String activity=" ";
+String moocs1=" ";
+String moocs2=" ";
+String moocs3=" ";
+String moocs4=" ";
+String link1=" ";
+String link2=" ";
+String link3=" ";
+String link4=" ";
  try{
 	 Connection con = null;
 	 Class.forName("com.mysql.jdbc.Driver");
@@ -85,6 +85,7 @@ String link4="#";
 	   link3=rs.getString(35);
 	   moocs4=rs.getString(36);
 	   link4=rs.getString(37);
+	   id=rs.getInt(38);
 	 }
  }
  catch(Exception e)
@@ -118,7 +119,7 @@ String link4="#";
       href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,700,800,900&display=swap"
       rel="stylesheet"
     />
-    <title>Resume</title>
+    <title>Resume-<%=id %></title>
   </head>
   <body>
     <div class="box">

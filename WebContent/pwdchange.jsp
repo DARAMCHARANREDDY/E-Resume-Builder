@@ -17,9 +17,12 @@ if(password1.equals(password2))
 	stmt.setString(2, email);
 	stmt.setString(1, password1);
 	int rs=stmt.executeUpdate();
-	if(rs>0) {
-		response.sendRedirect("example.html");
-		
+	if(rs>0) 
+	{
+		out.println("<script type=\"text/javascript\">");
+	    out.println("alert('Password Changed Successfully');"
+	        + "window.location.replace(\"example.html\");");
+	    out.println("</script>");
 	}
 }
 }

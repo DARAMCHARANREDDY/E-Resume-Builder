@@ -16,14 +16,13 @@ PreparedStatement stmt=con.prepareStatement("insert into user values(?,?,?)");
 stmt.setString(1, fullname);
 stmt.setString(2, email);
 stmt.setString(3, password);
-boolean rs=stmt.execute();
-if(rs)
+int rs=stmt.executeUpdate();
+if(rs>0)
 {
-	response.sendRedirect("page0.html");
-}
-else
-{
-	response.sendRedirect("example.html");
+	out.println("<script type=\"text/javascript\">");
+    out.println("alert('Registration Successful');"
+        + "window.location.replace(\"example.html\");");
+    out.println("</script>");
 }
 }
 catch(Exception e){

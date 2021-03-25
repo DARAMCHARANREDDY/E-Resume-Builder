@@ -20,7 +20,7 @@ $(document).ready(function()
         {
         if(x < list_maxField){ 
             x++; 
-            var list_fieldHTML = '<div class="row"><div class="col-xs-3 col-sm-3 col-md-3"><div class="form-group"><input name="list['+x+'][]" type="text" placeholder="Board" class="form-control"/></div></div><div class="col-xs-4 col-sm-4 col-md-4"><div class="form-group"><input name="list1['+x+'][]" type="text" placeholder="Institution"class="form-control"/></div></div><div class="col-xs-2 col-sm-2 col-md-2"><div class="form-group"><input name="list2['+x+'][]" type="text" placeholder="YOP" class="form-control"/></div></div><div class="col-xs-2 col-sm-2 col-md-2"><div class="form-group"><input name="list3['+x+'][]" type="text" placeholder="GPA" class="form-control"/></div></div><div class="col-xs-1 col-sm-7 col-md-1"><a href="javascript:void(0);" class="list_remove_button btn btn-danger">-</a></div></div>'; 
+            var list_fieldHTML = '<div class="row"><div class="col-xs-3 col-sm-3 col-md-3"><div class="form-group"><input name="list['+x+'][]" type="text" placeholder="Board" class="form-control" /></div></div><div class="col-xs-4 col-sm-4 col-md-4"><div class="form-group"><input name="list1['+x+'][]" type="text" placeholder="Institution"class="form-control" /></div></div><div class="col-xs-2 col-sm-2 col-md-2"><div class="form-group"><input name="list2['+x+'][]" type="text" placeholder="YOP" class="form-control" /></div></div><div class="col-xs-2 col-sm-2 col-md-2"><div class="form-group"><input name="list3['+x+'][]" type="text" placeholder="GPA" class="form-control" /></div></div><div class="col-xs-1 col-sm-7 col-md-1"><a href="javascript:void(0);" class="list_remove_button btn btn-danger">-</a></div></div>'; 
             $('.list_wrapper').append(list_fieldHTML); 
         }
         else
@@ -53,6 +53,7 @@ $(document).ready(function()
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                  <li><a href="#"><%=email %></a></li>
+                 <li><a href="logout.jsp">Logout</a></li>
             </ul>
         </nav>
     </header>
@@ -77,7 +78,7 @@ $(document).ready(function()
 
                                         <div class="form-group">
                                             Board
-                                            <input name="list[0][]" type="text" placeholder="Board" class="form-control"/>
+                                            <input name="list[0][]" type="text" placeholder="Board" class="form-control" />
                                             
                                         </div>
                                     </div>
@@ -85,19 +86,19 @@ $(document).ready(function()
                                     <div class="col-xs-4 col-sm-4 col-md-4">
                                         <div class="form-group">
                                             Institution
-                                            <input autocomplete="off" name="list1[0][]" type="text" placeholder="Institution" class="form-control"/>
+                                            <input autocomplete="off" name="list1[0][]" type="text" placeholder="Institution" class="form-control" />
                                         </div>
                                     </div> 
                                     <div class="col-xs-2 col-sm-2 col-md-2">
                                         <div class="form-group">
                                             Year Of Passing
-                                            <input autocomplete="off" name="list2[0][]" type="text" placeholder="YOP" class="form-control"/>
+                                            <input autocomplete="off" name="list2[0][]" type="text" placeholder="YOP" class="form-control" />
                                         </div>
                                     </div> 
                                     <div class="col-xs-2 col-sm-2 col-md-2">
                                         <div class="form-group">
                                             Percentage/GPA
-                                            <input autocomplete="off" name="list3[0][]" type="text" placeholder="GPA" class="form-control"/>
+                                            <input autocomplete="off" name="list3[0][]" type="text" placeholder="GPA" class="form-control" />
                                         </div>
                                     </div> 
                                     <div class="col-xs-1 col-sm-1 col-md-1">
@@ -128,7 +129,7 @@ $(document).ready(function()
     </script>
 </main>
 <br>
-<footer>
+<footer style="position:fixed; bottom:0%;">
     <span>E-RESUME BUILDER<br>Copyright &copy; 2020 </span>
 </footer>
 </body>

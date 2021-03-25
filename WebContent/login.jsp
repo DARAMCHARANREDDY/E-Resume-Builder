@@ -17,21 +17,19 @@ stmt.setString(2, password);
 ResultSet rs=stmt.executeQuery();
 if(rs.next()) {
 	session.setAttribute("email",email);
-	response.sendRedirect("page0.jsp");
-	%>
-	<script>
-	alert("Login successfull");
-	</script>
-	<%
+	out.println("<script type=\"text/javascript\">");
+    out.println("alert('Login Successful');"
+        + "window.location.replace(\"page0.jsp\");");
+    out.println("</script>");
 }
 else
 {
-	response.sendRedirect("example.html");
-	%>
-	<script>
-	alert("Login unsuccessfull");
-	</script>
-	<%
+
+	out.println("<script type=\"text/javascript\">");
+    out.println("alert('E - Mail or Password Incorrect!');"
+        + "window.location.replace(\"example.html\");");
+    out.println("</script>");
+
 }
 }
 catch(Exception e){

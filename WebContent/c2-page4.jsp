@@ -1,5 +1,4 @@
-<%
-String email=(String)session.getAttribute("email");
+<% String email=(String)session.getAttribute("email");
 %>
 <!DOCTYPE html>
 <html>
@@ -13,20 +12,16 @@ String email=(String)session.getAttribute("email");
 $(document).ready(function()
     {
     var x = 0; 
-    var list_maxField = 3; 
+    var list_maxField = 2; 
     
         
     $('.list_add_button').click(function()
         {
         if(x < list_maxField){ 
             x++; 
-            var list_fieldHTML = '<div class="row"><div class="col-xs-4 col-sm-4 col-md-4"><div class="form-group"><input name="list['+x+'][]" type="text" placeholder="Skill" class="form-control" /></div></div><div class="col-xs-7 col-sm-7 col-md-7"><div class="form-group"><input name="list1['+x+'][]" type="text" placeholder="Level" class="form-control" /></div></div><div class="col-xs-1 col-sm-7 col-md-1"><a href="javascript:void(0);" class="list_remove_button btn btn-danger">-</a></div></div>'; //New input field html 
+            var list_fieldHTML = '<div class="row"><div class="col-xs-4 col-sm-4 col-md-4"><div class="form-group"><input name="list['+x+'][]" type="text" placeholder="Skill" class="form-control"/></div></div><div class="col-xs-7 col-sm-7 col-md-7"><div class="form-group"><input name="list1['+x+'][]" type="text" placeholder="Level" class="form-control"/></div></div><div class="col-xs-1 col-sm-7 col-md-1"><a href="javascript:void(0);" class="list_remove_button btn btn-danger">-</a></div></div>'; //New input field html 
             $('.list_wrapper').append(list_fieldHTML); //Add field html
         }
-        else
-        	{
-        	alert("You can add upto 4 records only");
-        	}
         });
     
         
@@ -42,7 +37,7 @@ $(document).ready(function()
 
 <body style="background-color: #1A3263;color: #FAB95B;">
     <header>
-        <a id="logo" href="page0.html">
+        <a id="logo" href="index.html">
             <img src="logo.png" alt="Logo">
             <span>E-Resume Builder</span>
         </a>
@@ -65,11 +60,11 @@ $(document).ready(function()
 
                     <div class="panel-heading text-center">
                    
-                        <h1 class="panel-title">Provide your MOOC's Certifications </h1>
+                        <h1 class="panel-title">List out your Skills</h1>
                     </div>
                     <hr>
                     <div class="panel-body">
-                        <form role="form" method="post" action="resume1entrypage6.jsp">
+                        <form role="form" method="post" action="resume2entrypage4.jsp">
                             
                             <div class="list_wrapper">  
                                 <div class="row">
@@ -77,16 +72,16 @@ $(document).ready(function()
                                     <div class="col-xs-4 col-sm-4 col-md-4">
 
                                         <div class="form-group">
-                                            MOOC's Name
-                                            <input name="list[0][]" type="text" placeholder="MOOC's Name" class="form-control" />
+                                            Skill
+                                            <input name="list[0][]" type="text" placeholder="Skill" class="form-control"/>
                                             
                                         </div>
                                     </div>
 
                                     <div class="col-xs-7 col-sm-7 col-md-7">
                                         <div class="form-group">
-                                            Link
-                                            <input autocomplete="off" name="list1[0][]" type="text" placeholder="Link" class="form-control" />
+                                            Level
+                                            <input name="list1[0][]" type="text" placeholder="Level" class="form-control"/>
                                         </div>
                                     </div> 
 
@@ -97,9 +92,9 @@ $(document).ready(function()
                                 </div>
                             </div>
                             <div class="text-center">
-							    <button type="reset" class="btn btn-primary" onclick="backward22()" style="margin-right: 25px;margin-left: 25px;">BACK</button>
-							    <button type="submit" class="btn btn-primary">SAVE&NEXT</button>
-							</div>
+    <button type="reset" class="btn btn-primary" onclick="backward11()" style="margin-right: 25px;margin-left: 25px;">BACK</button>
+    <button type="submit" class="btn btn-primary">SAVE&NEXT</button>
+    </div>
                         </form>
                     </div>
                 </div>
@@ -107,13 +102,13 @@ $(document).ready(function()
         </div>
     </div>
     <script>
-        function backward22()
+        function backward11()
         {
-            window.location="page6.jsp"
+            window.location="c2-page3.jsp";
         }        
-        function forward22()
+        function forward11()
          {
-            window.location="success.html";
+            window.location="c2-page5.jsp";
          }
     </script>
 </main>

@@ -1,3 +1,5 @@
+<% String email=(String)session.getAttribute("email");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,20 +12,16 @@
 $(document).ready(function()
     {
     var x = 0; 
-    var list_maxField = 3; 
+    var list_maxField = 2; 
     
         
     $('.list_add_button').click(function()
         {
         if(x < list_maxField){ 
             x++; 
-            var list_fieldHTML = '<div class="row"><div class="col-xs-4 col-sm-4 col-md-4"><div class="form-group"><input name="list['+x+'][]" type="text" placeholder="Skill" class="form-control"/></div></div><div class="col-xs-7 col-sm-7 col-md-7"><div class="form-group"><input name="list['+x+'][]" type="text" placeholder="Level" class="form-control"/></div></div><div class="col-xs-1 col-sm-7 col-md-1"><a href="javascript:void(0);" class="list_remove_button btn btn-danger">-</a></div></div>'; //New input field html 
+            var list_fieldHTML = '<div class="row"><div class="col-xs-4 col-sm-4 col-md-4"><div class="form-group"><input name="list['+x+'][]" type="text" placeholder="Job Title at comapny" class="form-control"/></div></div><div class="col-xs-3 col-sm-3 col-md-3"><div class="form-group"><input name="list1['+x+'][]" type="text" placeholder="No of years worked" class="form-control"/></div></div><div class="col-xs-3 col-sm-3 col-md-3"><div class="form-group"><input name="list2['+x+'][]" type="text" placeholder="Role" class="form-control"/></div></div><div class="col-xs-1 col-sm-7 col-md-1"><a href="javascript:void(0);" class="list_remove_button btn btn-danger">-</a></div></div>'; //New input field html 
             $('.list_wrapper').append(list_fieldHTML); //Add field html
         }
-        else
-        	{
-        	alert("You can add upto 4 records only");
-        	}
         });
     
         
@@ -48,9 +46,9 @@ $(document).ready(function()
         <nav>
             <ul>
                 <li><a href="about.html">About</a></li>
-                <li><a href="example.html">Registration</a></li>
-                <li><a href="example.html">Login</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="#"><%=email %></a></li>
+                <li><a href="logout.jsp">Logout</a></li>
             </ul>
         </nav>
     </header>
@@ -62,11 +60,11 @@ $(document).ready(function()
 
                     <div class="panel-heading text-center">
                    
-                        <h1 class="panel-title">List out your Skills</h1>
+                        <h1 class="panel-title">Work experience </h1>
                     </div>
                     <hr>
                     <div class="panel-body">
-                        <form role="form" method="post" action="">
+                        <form role="form" method="post" action="resume2entrypage3.jsp">
                             
                             <div class="list_wrapper">  
                                 <div class="row">
@@ -74,16 +72,22 @@ $(document).ready(function()
                                     <div class="col-xs-4 col-sm-4 col-md-4">
 
                                         <div class="form-group">
-                                            Skill
-                                            <input name="list[0][]" type="text" placeholder="Skill" class="form-control"/>
+                                            Work position
+                                            <input name="list[0][]" type="text" placeholder="Job Title at comapny" class="form-control"/>
                                             
                                         </div>
                                     </div>
 
-                                    <div class="col-xs-7 col-sm-7 col-md-7">
+                                    <div class="col-xs-3 col-sm-3 col-md-3">
                                         <div class="form-group">
-                                            Level
-                                            <input autocomplete="off" name="list[0][]" type="text" placeholder="Level" class="form-control"/>
+                                            Experience
+                                            <input  name="list1[0][]" type="text" placeholder="No of years worked" class="form-control"/>
+                                        </div>
+                                    </div> 
+                                    <div class="col-xs-3 col-sm-3 col-md-3">
+                                        <div class="form-group">
+                                            Role in company
+                                            <input name="list2[0][]" type="text" placeholder="Role" class="form-control"/>
                                         </div>
                                     </div> 
 
@@ -93,30 +97,30 @@ $(document).ready(function()
                                     </div>
                                 </div>
                             </div>
+                            <div class="text-center">
+    <button type="reset" class="btn btn-primary" onclick="backward11()" style="margin-right: 25px;margin-left: 25px;">BACK</button>
+    <button type="submit" class="btn btn-primary" >SAVE&NEXT</button>
+    </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="text-center">
-    <button type="reset" class="btn btn-primary" onclick="backward11()" style="margin-right: 25px;margin-left: 25px;">BACK</button>
-    <button type="submit" class="btn btn-primary" onclick="forward11()">SAVE&NEXT</button>
-    </div>
     <script>
         function backward11()
         {
-            window.location="page3.html"
+            window.location="c2-page2.jsp";
         }        
         function forward11()
          {
-            window.location="page5.html";
+            window.location="c2-page4.jsp";
          }
     </script>
 </main>
 <br>
-<footer>
-    <span>E-RESUME BUILDER<br>Copyright &copy; 2020 </span>
-</footer>
+<footer style="position:fixed; bottom:0%;">
+			<span>E-RESUME BUILDER<br>Copyright &copy; 2020 </span>
+		</footer>
 </body>
 </html>

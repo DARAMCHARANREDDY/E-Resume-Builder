@@ -9,12 +9,12 @@
 	}
 	else if(resume_id.equals("resume2"))
 	{
-		response.sendRedirect("2-page1.html");
+		response.sendRedirect("c2-page1.jsp");
 	}
-	//else if(resume_id.equals("resume3"))
-	//{
-		//response.sendRedirect("page2.jsp");
-	//}
+	else if(resume_id.equals("resume3"))
+	{
+		response.sendRedirect("c3-page1.jsp");
+	}
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>

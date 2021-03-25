@@ -31,21 +31,23 @@ String email=(String)session.getAttribute("email");
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                  <li><a href="#"><%=email %></a></li>
+                 <li><a href="logout.jsp">Logout</a></li>
             </ul>
         </nav>
 	</header>
 	<main style="padding-left: 25px;padding-right: 25px;padding-top: 25px;">
 		<div class="h-tag">
-				<h2>Complete this form to let the employers know your activities</h2><br>
+				<h2>List out your Activities/Hobbies.</h2><br>
 		</div>
 			<br>
 		<form name="f" method="post" action="resume1entrypage5.jsp">
 			<div class="form-row">
 				  	<div class="form-group col-md-6">
 				      <label for="inputAct4">Activities</label>
-				      <textarea class="form-control" rows="5" name="inputAct4"></textarea>
+				      <textarea class="form-control" rows="5" name="inputAct4" ></textarea>
 				    </div>
 			</div>
+			<br>
 					<button type="reset" class="btn" onclick="backward21()" style="margin-right: 25px">BACK</button>
 					<button type="submit" class="btn" >SAVE&NEXT</button>		    
 		</form>

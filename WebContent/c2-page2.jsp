@@ -1,3 +1,5 @@
+<% String email=(String)session.getAttribute("email");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,11 +9,11 @@
 	<script>
 		function backward7()
         {
-            window.location="page2.html"
+            window.location="c2-page1.jsp";
         }        
 		function forward7()
 	     {
-	        window.location="page4.html";
+	        window.location="c2-page3.jsp";
 	     }
 	</script>
 </head>
@@ -26,35 +28,31 @@
         <nav>
             <ul>
                 <li><a href="about.html">About</a></li>
-                <li><a href="example.html">Registration</a></li>
-                <li><a href="example.html">Login</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="#"><%=email %></a></li>
+                <li><a href="logout.jsp">Logout</a></li>
             </ul>
         </nav>
 	</header>
 	<main style="padding-left: 25px;padding-right: 25px;padding-top: 25px;">
 		<div class="h-tag">
-				<h2>Complete this form to let the employers know your objective</h2><br>
+				<h2>Complete this form to let the employers know your Personal Profile</h2><br>
 		</div>
 			<br>
-		<form>
+		<form method="post" action="resume2entrypage2.jsp">
 			<div class="form-row">
 				  	<div class="form-group col-md-6">
-				      <label for="inputObj4">PERSONAL PROFILE</label>
-				      <textarea class="form-control" rows="10" id="inputObj4"></textarea>
+				      <label for="inputPP4">PERSONAL PROFILE</label>
+				      <textarea class="form-control" rows="10" name="inputPP4"></textarea>
 				    </div>
-			</div>	    
+			</div>
+			<button type="reset" class="btn" onclick="backward7()" style="margin-right: 25px">BACK</button>
+		<button type="submit" class="btn" >SAVE&NEXT</button>	    
 		</form>
-		<br>
-		<button type="reset" class="btn" onclick="backward7()" style="margin-right: 25px">BACK</button>
-		<button type="submit" class="btn" onclick="forward7()">SAVE&NEXT</button>	
+		<br>	
 	</main>
-	<br>
-	<br>
-	<br>
-	<br>
-	<footer>
-		<span>E-RESUME BUILDER<br>Copyright &copy; 2020 </span>
-	</footer>
+	<footer style="position:fixed; bottom:0%;">
+			<span>E-RESUME BUILDER<br>Copyright &copy; 2020 </span>
+		</footer>
 </body>
 </html>

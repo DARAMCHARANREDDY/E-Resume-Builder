@@ -1,3 +1,5 @@
+<% String email=(String)session.getAttribute("email");
+%>
 <html>
 	<head>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -5,15 +7,15 @@
 		<script>
 		function backward6()
         {
-            window.location="page1.html"
+            window.location="page1.jsp"
         }        
 		function forward6()
 	      {
-	        window.location="page3.html";
+	        window.location="c2-page2.jsp";
 	      }
 		</script>
 	</head>
-	<body style="background-color: #1A3263;color: #FAB95B">
+<body style="background-color: #1A3263;color: #FAB95B">
 		<header>
 
         <!-- our main logo -->
@@ -26,19 +28,19 @@
         <nav>
             <ul>
                 <li><a href="about.html">About</a></li>
-                <li><a href="example.html">Registration</a></li>
-                <li><a href="example.html">Login</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="#"><%=email %></a></li>
+                <li><a href="logout.jsp">Logout</a></li>
             </ul>
         </nav>
 		</header>
-		<main style="padding-left: 25px;padding-right: 25px;padding-top: 25px;">
+				<main style="padding-left: 25px;padding-right: 25px;padding-top: 25px;">
 			<div class="h-tag">
 				<h2>COMPLETE YOUR <bold>RESUME HEADING</bold></h2><br>
 				<h4>Employers will use this information to contact you</h4>
 			</div>
 			<br>
-			<form method="post" action="resume1entrypage.jsp">
+			<form method="post" action="resume2entrypage1.jsp">
 				  <div class="form-row">
 				  	<div class="form-group col-md-6">
 				      <label for="inputFName4">FirstName</label>
@@ -59,19 +61,18 @@
 				  </div>
 				  <div class="form-row">
 				  	<div class="form-group col-md-6">
-				      <label for="inputCity">GitHub</label>
-				      <input type="text" class="form-control" name="inputGithub4" placeholder="GitHub">
+				      <label for="inputCity">Role</label>
+				      <input type="text" class="form-control" name="inputRole4" placeholder="Role">
 				    </div>
 				    <div class="form-group col-mod-6">
 					    <label for="inputNumber4">Phone Number</label>
 					    <input type="text" class="form-control" name="inputNumber4" placeholder="123478469">
 				  	</div>
 				  </div>
-				  
+				  <button type="reset" class="btn" onclick="backward6()" style="margin-right: 25px">BACK</button>
+				<button type="submit" class="btn">SAVE&NEXT</button>
 				</form>
 				<br>
-				<button type="reset" class="btn" onclick="backward6()" style="margin-right: 25px">BACK</button>
-				<button type="submit" class="btn" onclick="forward6()">SAVE&NEXT</button>
 		</main>
 		<footer style="position:fixed; bottom:0%;">
 			<span>E-RESUME BUILDER<br>Copyright &copy; 2020 </span>

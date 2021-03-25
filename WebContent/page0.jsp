@@ -28,8 +28,9 @@ String email=(String)session.getAttribute("email");
         <nav>
             <ul>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.jsp">Contact</a></li>
                 <li><a href="#"><%=email %></a></li>
+                <li><a href="logout.jsp">Logout</a></li>
                 
             </ul>
         </nav>
@@ -77,8 +78,8 @@ String email=(String)session.getAttribute("email");
 
             <div class="feature-box">
                 <img src="pen-page1.png" alt="Edit">
-                <h3 class="feature-box-title-title">Show what <br />you´re made of</h3>
-                <p class="feature-box-info-info">Not finding the right words to showcase yourself? We´ve added thousands of pre-written examples and resume samples.  </br>As easy as a click.</p>
+                <h3 class="feature-box-title-title">Show what <br />you are made of</h3>
+                <p class="feature-box-info-info">Not finding the right words to showcase yourself? We have added thousands of pre-written examples and resume samples.  </br>As easy as a click.</p>
             </div>
 
             <div class="feature-box">
@@ -90,7 +91,7 @@ String email=(String)session.getAttribute("email");
         </div>
         </div>
     </main>
-    <footer>
+    <footer style="position:fixed; bottom:0%;">
       
         <span>E-RESUME BUILDER<br>Copyright &copy; 2020 </span>
     </footer>

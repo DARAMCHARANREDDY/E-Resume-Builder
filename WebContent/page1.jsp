@@ -199,8 +199,9 @@ input[class=btn] {
         <nav>
             <ul>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.jsp">Contact</a></li>
                  <li><a href="#"><%=email %></a></li>
+                 <li><a href="logout.jsp">Logout</a></li>
             </ul>
         </nav>
 </header>

@@ -31,44 +31,46 @@ String email=(String)session.getAttribute("email");
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                  <li><a href="#"><%=email %></a></li>
+                 <li><a href="logout.jsp">Logout</a></li>
             </ul>
         </nav>
 		</header>
 		<main style="padding-left: 25px;padding-right: 25px;padding-top: 25px;">
 			<div class="h-tag">
-				<h2>COMPLETE YOUR <bold>RESUME HEADING</bold></h2><br>
-				<h4>Employers will use this information to contact you</h4>
+				<h1>General Information</h1><br>
+				<h4>Employers will use this information to contact you!!</h4>
 			</div>
 			<br>
 			<form method="post" action="resume1entrypage.jsp">
 				  <div class="form-row">
 				  	<div class="form-group col-md-6">
 				      <label for="inputFName4">FirstName</label>
-				      <input type="text" class="form-control" name="inputFName4" placeholder="First Name">
+				      <input type="text" class="form-control" name="inputFName4" placeholder="First Name" >
 				    </div>
 				    <div class="form-group col-md-6">
 				      <label for="inputFName4">LastName</label>
-				      <input type="text" class="form-control" name="inputLName4" placeholder="Last Name">
+				      <input type="text" class="form-control" name="inputLName4" placeholder="Last Name"  >
 				    </div>
 				    <div class="form-group col-md-6">
 				      <label for="inputEmail4">Email</label>
-				      <input type="email" class="form-control" name="inputEmail4" placeholder="Email">
+				      <input type="email" class="form-control" name="inputEmail4" placeholder="Email"  >
 				    </div>
 				    <div class="form-group col-md-6">
 				      <label for="inputLinkdein4">Linkedin</label>
-				      <input type="text" class="form-control" name="inputLinkdein4" placeholder="Linkdein">
+				      <input type="text" class="form-control" name="inputLinkdein4" placeholder="Linkdein"  >
 				    </div>
 				  </div>
 				  <div class="form-row">
 				  	<div class="form-group col-md-6">
 				      <label for="inputCity">GitHub</label>
-				      <input type="text" class="form-control" name="inputGithub4" placeholder="GitHub">
+				      <input type="text" class="form-control" name="inputGithub4" placeholder="GitHub"  >
 				    </div>
 				    <div class="form-group col-mod-6">
 					    <label for="inputNumber4">Phone Number</label>
-					    <input type="text" class="form-control" name="inputNumber4" placeholder="123478469">
+					    <input type="text" class="form-control" name="inputNumber4" placeholder="123478469"  >
 				  	</div>
 				  </div>
+				  <br>
 				  <button type="reset" class="btn" onclick="backward6()" style="margin-right: 25px">BACK</button>
 				<button type="submit" class="btn">SAVE&NEXT</button>
 				</form>

@@ -1,3 +1,6 @@
+<%
+String email=(String)session.getAttribute("email");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,17 +13,21 @@
 $(document).ready(function()
     {
     var x = 0; 
-    var list_maxField = 10; 
+    var list_maxField = 2; 
     
         
     $('.list_add_button').click(function()
         {
         if(x < list_maxField){ 
             x++; 
-            var list_fieldHTML = '<div class="row"><div class="col-xs-4 col-sm-4 col-md-4"><div class="form-group"><input name="list['+x+'][]" type="text" placeholder="job Title at comapny" class="form-control"/></div></div><div class="col-xs-7 col-sm-7 col-md-7"><div class="form-group"><input name="list['+x+'][]" type="text" placeholder="No of years worked" class="form-control"/></div><div class="form-group"><input name="list['+x+'][]" type="text" placeholder="Role" class="form-control"/></div></div><div class="col-xs-1 col-sm-7 col-md-1"><a href="javascript:void(0);" class="list_remove_button btn btn-danger">-</a></div></div>'; //New input field html 
-            $('.list_wrapper').append(list_fieldHTML); //Add field html
+            var list_fieldHTML = ' <div class="row"><div class="col-xs-4 col-sm-4 col-md-4"><div class="form-group"><input name="list[0][]" type="text" placeholder="Institution" class="form-control"/></div></div><div class="col-xs-3 col-sm-3 col-md-3"><div class="form-group"><input name="list1[0][]" type="text" placeholder="Enter the stream which you have studied " class="form-control"/></div></div><div class="col-xs-2 col-sm-2 col-md-2"><div class="form-group"><input autocomplete="off" name="list2[0][]" type="text" placeholder="GPA" class="form-control"/></div></div><div class="col-xs-1 col-sm-7 col-md-1"><a href="javascript:void(0);" class="list_remove_button btn btn-danger">-</a></div></div>'; 
+            $('.list_wrapper').append(list_fieldHTML); 
         }
-        });
+        else
+    	{
+    	alert("You can add upto 3 records only");
+    	}
+    });
     
         
         $('.list_wrapper').on('click', '.list_remove_button', function()
@@ -44,81 +51,76 @@ $(document).ready(function()
         <nav>
             <ul>
                 <li><a href="about.html">About</a></li>
-                <li><a href="example.html">Registration</a></li>
-                <li><a href="example.html">Login</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="#"><%=email %></a></li>
+                 <li><a href="logout.jsp">Logout</a></li>
             </ul>
         </nav>
     </header>
     <main>
     <div class="container">
         <div class="row centered-form">
-            <div class="col-xs-12 col-sm-8 col-md-8 col-sm-offset-2 col-md-offset-2">
+            <div class="col-xs-15 col-sm-15 col-md-15 ">
                 <div class="panel panel-info">
 
                     <div class="panel-heading text-center">
                    
-                        <h1 class="panel-title">Work experience </h1>
+                        <h1 class="panel-title">List out your educational qualifications</h1>
                     </div>
                     <hr>
                     <div class="panel-body">
-                        <form role="form" method="post" action="">
+                        <form role="form" method="post" action="resume3entrypage6.jsp">
                             
                             <div class="list_wrapper">  
                                 <div class="row">
-
-                                    <div class="col-xs-4 col-sm-4 col-md-4">
-
+                                <div class="col-xs-4 col-sm-4 col-md-4">
                                         <div class="form-group">
-                                            Work position
-                                            <input name="list[0][]" type="text" placeholder="Job Title at comapny" class="form-control"/>
-                                            
+                                            Institution
+                                            <input autocomplete="off" name="list[0][]" type="text" placeholder="Institution" class="form-control"/>
                                         </div>
                                     </div>
-
-                                    <div class="col-xs-7 col-sm-7 col-md-7">
+                                    <div class="col-xs-3 col-sm-3 col-md-3">
                                         <div class="form-group">
-                                            Experience
-                                            <input autocomplete="off" name="list[0][]" type="text" placeholder="No of years worked" class="form-control"/>
+                                            Specialized In:
+                                            <input name="list1[0][]" type="text" placeholder="Enter the stream which you have studied " class="form-control"/>
+                                        </div>
+                                    </div>  
+                                    <div class="col-xs-2 col-sm-2 col-md-2">
+                                        <div class="form-group">
+                                            GPA
+                                            <input autocomplete="off" name="list2[0][]" type="text" placeholder="GPA" class="form-control"/>
                                         </div>
                                     </div> 
-                                    <div class="col-xs-7 col-sm-7 col-md-7">
-                                        <div class="form-group">
-                                            Role in company
-                                            <input autocomplete="off" name="list[0][]" type="text" placeholder="Role" class="form-control"/>
-                                        </div>
-                                    </div> 
-
                                     <div class="col-xs-1 col-sm-1 col-md-1">
                                         <br>
                                        <button class="btn btn-primary list_add_button" type="button">+</button>
                                     </div>
                                 </div>
                             </div>
+                                <div class="text-center">
+							    <button type="reset" class="btn btn-primary" onclick="backward12()" style="margin-right: 25px;margin-left: 25px;">BACK</button>
+							    <button type="submit" class="btn btn-primary">SAVE&NEXT</button>
+							    </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="text-center">
-    <button type="reset" class="btn btn-primary" onclick="backward11()" style="margin-right: 25px;margin-left: 25px;">BACK</button>
-    <button type="submit" class="btn btn-primary" onclick="forward11()">SAVE&NEXT</button>
-    </div>
     <script>
-        function backward11()
+        function backward12()
         {
-            window.location="page3.html"
+            window.location="c3-page5.jsp";
         }        
-        function forward11()
+        function forward12()
          {
-            window.location="page5.html";
+            window.location="success.html";
          }
     </script>
 </main>
 <br>
-<footer>
-    <span>E-RESUME BUILDER<br>Copyright &copy; 2020 </span>
-</footer>
+<footer style="position:fixed; bottom:0%;">
+		<span>E-RESUME BUILDER<br>Copyright &copy; 2020 </span>
+	</footer>
 </body>
 </html>
